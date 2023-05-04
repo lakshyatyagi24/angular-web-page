@@ -1,7 +1,16 @@
-<ejs-grid #grid [dataSource]='data' class="my-grid">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<h1>This is a demo</h1>
+<ejs-grid #grid [dataSource]='data' class="my-grid" [toolbar]="toolbar">
     <e-columns>
         <e-column field='Name' headerText='Name'></e-column>
         <e-column field='Code' headerText='Code'></e-column>
-        <e-column field='Rate' headerText='Rate'></e-column>
+        <e-column field='Rate' headerText='Rate' [valueAccessor]="valueAccess"></e-column>
+        
+        <e-column headerText="Action">
+            <ng-template #template let-data>
+                <span class="glyphicon glyphicon-pencil"></span>
+            </ng-template>
+        </e-column>
+
     </e-columns>
 </ejs-grid>

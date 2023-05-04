@@ -5,6 +5,7 @@ import { GridModule } from '@syncfusion/ej2-angular-grids';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SyncfusionDataGridComponent } from './syncfusion-data-grid/syncfusion-data-grid.component';
+import { ToolbarService, EditService } from '@syncfusion/ej2-angular-grids';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { SyncfusionDataGridComponent } from './syncfusion-data-grid/syncfusion-d
     AppRoutingModule,
     GridModule
   ],
-  providers: [],
+  providers: [ToolbarService, EditService],
   bootstrap: [AppComponent]
 })
 

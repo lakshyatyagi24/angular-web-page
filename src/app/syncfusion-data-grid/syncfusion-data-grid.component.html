@@ -1,7 +1,11 @@
-<ejs-grid #grid [dataSource]='data' class="my-grid">
+<ejs-grid #grid [dataSource]="data" [allowPaging]='true' [allowSorting]='true' [allowFiltering]='true'
+    [filterSettings]='filterSettings' [allowGrouping]='true' (rowSelected)="onRowSelected($event)">
     <e-columns>
-        <e-column field='Name' headerText='Name'></e-column>
-        <e-column field='Code' headerText='Code'></e-column>
-        <e-column field='Rate' headerText='Rate'></e-column>
+        <e-column field="Name" headerText="Name"></e-column>
+        <e-column field="Code" headerText="Code"></e-column>
+        <e-column field="Rate" headerText="Rate"></e-column>
     </e-columns>
 </ejs-grid>
+
+<ejs-dialog id='dialog' #ejDialog showCloseIcon='true' header='Dialog' content='This is a Dialog with drag enabled'
+    [target]='targetElement' width='250px'> </ejs-dialog>

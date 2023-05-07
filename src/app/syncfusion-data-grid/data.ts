@@ -8,6 +8,9 @@ export const data = [
     { Name: 'Product G', Code: 'A007', Rate: 70 },
     { Name: 'Product H', Code: 'A008', Rate: 80 },
     { Name: 'Product I', Code: 'A009', Rate: 90 },
+    { Name: 'Product J', Code: 'A010', Rate: 100 },
+    { Name: 'Product J', Code: 'A010', Rate: 100 },
+    { Name: 'Product J', Code: 'A010', Rate: 100 },
     { Name: 'Product J', Code: 'A010', Rate: 100 }
   ];
   

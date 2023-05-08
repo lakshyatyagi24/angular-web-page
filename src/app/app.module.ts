@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { SyncfusionDataGridComponent } from './syncfusion-data-grid/syncfusion-data-grid.component';
 import { DialogModule } from '@syncfusion/ej2-angular-popups';
 import { PageService, SortService, FilterService, GroupService } from '@syncfusion/ej2-angular-grids';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { PageService, SortService, FilterService, GroupService } from '@syncfusi
     BrowserModule,
     AppRoutingModule,
     GridModule,
-    DialogModule
+    DialogModule,
+    FormsModule
   ],
   providers: [PageService, SortService, FilterService, GroupService],
   bootstrap: [AppComponent]

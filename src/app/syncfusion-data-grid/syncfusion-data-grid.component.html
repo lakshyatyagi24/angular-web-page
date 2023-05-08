@@ -7,5 +7,24 @@
     </e-columns>
 </ejs-grid>
 
-<ejs-dialog id='dialog' #ejDialog showCloseIcon='true' header='Dialog' content='This is a Dialog with drag enabled'
-    [target]='targetElement' width='250px'> </ejs-dialog>
+<ejs-dialog id='dialog' #ejDialog showCloseIcon='true' [target]='targetElement' width='250px'>
+    <ng-template #dialogContent>
+        <form #form="ngForm">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" [(ngModel)]="selectedRecord.Name" required>
+          </div>
+          <div>
+            <label for="code">Code:</label>
+            <input type="text" id="code" name="code" [(ngModel)]="selectedRecord.Code" required>
+          </div>
+          <div>
+            <label for="rate">Rate:</label>
+            <input type="text" id="rate" name="rate" [(ngModel)]="selectedRecord.Rate" required>
+          </div>
+        </form>
+      </ng-template>
+      <ng-template #dialogButtons>
+        <button class="e-control e-btn" (click)="saveRecord()">Save</button>
+      </ng-template>
+</ejs-dialog>
